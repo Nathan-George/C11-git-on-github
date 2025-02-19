@@ -20,5 +20,16 @@ public class House {
 		// Draw the roof
 		g2.setColor(Color.red);
 		g2.fillPolygon(new int[] {houseX, houseX + HOUSE_DIMENSION, houseX + HOUSE_DIMENSION / 2}, new int[] {houseY, houseY, houseY - HOUSE_HIEGHT}, 3);
+	
+		//Draw the road
+		g2.setColor(Color.black);
+		g2.fillRect(0, houseY + (int)(1.1 * HOUSE_DIMENSION), 1000,  HOUSE_HIEGHT);
+		
+		//Draw dashes on the road
+		g2.setColor(Color.yellow);
+		g2.fillRect(0, houseY + (int)(1.2 * HOUSE_DIMENSION), 50, HOUSE_HIEGHT / 5);
+		g2.fillRect(125, houseY + (int)(1.2 * HOUSE_DIMENSION), 50, HOUSE_HIEGHT / 5);
+		g2.fillRect(250, houseY + (int)(1.2 * HOUSE_DIMENSION), 50, HOUSE_HIEGHT / 5);
+		g2.fillRect(375, houseY + (int)(1.2 * HOUSE_DIMENSION), 50, HOUSE_HIEGHT / 5);
 	}
 }
