@@ -29,6 +29,16 @@ public class Cat {
 		// Draw the head
 		g2.setColor(Color.gray);
 		g2.fillOval(x, y, HEAD_DIMENSION, HEAD_DIMENSION);
+		
+		//Draw the ears
+		int[] leftX = {catX + (int)(HEAD_DIMENSION / 2), catX, catX + (int)(HEAD_DIMENSION * 0.2)};
+		int[] leftY = {catY + (int)(0.2 * HEAD_DIMENSION), catY + (int)(HEAD_DIMENSION / 2), (int)(catY * 0.75)};
+		g2.fillPolygon(leftX, leftY, 3);
+		
+		int[] rightX = {catX + (int)(HEAD_DIMENSION / 2), catX + HEAD_DIMENSION, catX + HEAD_DIMENSION - (int)(HEAD_DIMENSION * 0.2)};
+		int[] rightY = {catY + (int)(0.2 * HEAD_DIMENSION), catY + (int)(HEAD_DIMENSION / 2), (int)(catY * 0.75)};
+		g2.fillPolygon(rightX, rightY, 3);
+		
 		// Draw the eyes
 		g2.setColor(Color.green);
 		x = catX + EYE_X; 
@@ -36,6 +46,7 @@ public class Cat {
 		g2.fillOval(x, y, EYE_WIDTH, EYE_HEIGHT);
 		x += EYE_SEPARATION;
 		g2.fillOval(x, y, EYE_WIDTH, EYE_HEIGHT);
+		
 		// Draw the mouth
 		g2.setColor(Color.pink);
 		x = catX + MOUTH_X;
